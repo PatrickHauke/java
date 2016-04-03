@@ -3,14 +3,8 @@ package foodcostcaluculator_test;
 
 public class valueInputs {
     private int itemCount;
-    private double taxRate = 8.875, tipRate, itemCost, preTaxMeal,finalTax,finalTip;
-    private final double taxPercent;
-    private final double tipPercent;
+    private double taxRate, tipRate, itemCost, preTaxMeal,finalTax,finalTip;
 
-    public valueInputs() {
-        this.taxPercent = taxRate/100;
-        this.tipPercent = tipRate/100;
-    }
     public int getItemCount(){
         return itemCount;
     }
@@ -24,21 +18,21 @@ public class valueInputs {
         itemCost = cost;
     }
     public void setTipRate(double tip){
-        tipRate = tip;
+        tipRate = tip/100;
     }
     public void setTaxRate(double tax){
-        taxRate = tax;
+        taxRate = tax/100;
     }
     public double holdPreTaxMeal(){
         preTaxMeal = preTaxMeal + itemCost;
         return preTaxMeal;
     }
     public double getFinalTip(){
-        finalTip = (preTaxMeal*tipPercent);
+        finalTip = (preTaxMeal*tipRate);
         return finalTip;
     }
     public double getFinalTax(){
-        finalTax = (preTaxMeal*taxPercent)+preTaxMeal;
+        finalTax = (preTaxMeal*taxRate)+preTaxMeal;
         return finalTax;
     }
     public double getFinalBill(){
