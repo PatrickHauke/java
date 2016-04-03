@@ -3,7 +3,7 @@ package foodcostcaluculator_test;
 
 public class valueInputs {
     private int itemCount;
-    private double taxRate, tipRate, itemCost, preTaxMeal,finalTax,finalTip;
+    private double taxRate = 8.875, tipRate, itemCost, preTaxMeal,finalTax,finalTip;
     private final double taxPercent;
     private final double tipPercent;
 
