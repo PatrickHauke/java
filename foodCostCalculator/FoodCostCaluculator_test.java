@@ -24,18 +24,17 @@ public class FoodCostCaluculator_test {
         int count = guest.getItemCount();
             while(i<=count){
                 System.out.println("\nItem #"+i);
-                System.out.print("Cost: ");
+                System.out.print("Cost: $");
                 guest.setItemCost(input.nextDouble()); 
                 guest.holdPreTaxMeal();
                 i++;
             }
         
+        System.out.println("\nWhat tip percent would you like to give?");
+        guest.setTipRate(input.nextDouble());
         
         System.out.println("\nWhat is your local tax rate? ");
         guest.setTaxRate(input.nextDouble());
-        
-        System.out.println("\nWhat tip percent would you like to give?");
-        guest.setTipRate(input.nextDouble());
         
         return guest;
     }
@@ -43,8 +42,8 @@ public class FoodCostCaluculator_test {
     public static valueInputs showData(valueInputs guest){
         DecimalFormat df = new DecimalFormat("$0.00");
        
-        System.out.println("\nThe bill after tax is "+ df.format(guest.getFinalTax())+".\n");
-        System.out.println("The tip to provide is "+ df.format(guest.getFinalTip())+".\n");
+        System.out.println("\nThe bill after tax is "+ df.format(guest.getFinalTax())+".");
+        System.out.println("The tip to provide is "+ df.format(guest.getFinalTip())+".");
         System.out.println("The total bill with tip is "+ df.format(guest.getFinalBill())+".");
         
         return guest;
