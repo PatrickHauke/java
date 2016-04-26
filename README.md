@@ -1,5 +1,4 @@
 # java
 Source code and projects written in Java 
 
-All code is available for use. I only ask that one takes the time to understand 
-what is being implemented; not only to copy and paste the code to complete an assignment.
+This is a collection of presentable programs which I have written in Java over the past semester while at university. It also includes projects completed outside of class and will be marked as such. 
