@@ -42,8 +42,8 @@ public class FoodCostCaluculator_test {
     public static valueInputs showData(valueInputs guest){
         DecimalFormat df = new DecimalFormat("$0.00");
        
-        System.out.println("\nThe bill after tax is "+ df.format(guest.getFinalTax())+".");
-        System.out.println("The tip to provide is "+ df.format(guest.getFinalTip())+".");
+        System.out.println("\nThe bill after tax is "+ df.format(guest.getFinalTax())+".\n");
+        System.out.println("The tip to provide is "+ df.format(guest.getFinalTip())+".\n");
         System.out.println("The total bill with tip is "+ df.format(guest.getFinalBill())+".");
         
         return guest;

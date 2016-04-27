@@ -1,0 +1,1 @@
+The purpose of this program was to demonstrate the uses of switch statements, arrays, and the modulo operator. 

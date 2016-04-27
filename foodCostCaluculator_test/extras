@@ -1,0 +1,33 @@
+Scanner input = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("$0.00");
+        int i=1;
+        byte itemCount;
+        double taxRate = 8.875/100, preTaxTotal = 0, cost;
+        
+        System.out.print("Enter in how many items on the check belong to you: ");
+        itemCount = input.nextByte();
+        while(i<=itemCount){
+            System.out.println("\nItem #"+i);
+            System.out.print("Cost: ");
+            cost = input.nextDouble();
+            preTaxTotal+=cost;
+            i++;
+            
+        }
+        System.out.println("\nWhat tip percent would you like to give?");
+        double tipPrecent=input.nextDouble()/100;
+        
+        System.out.println("Are you in NYC?");
+        String askLoc=input.next();
+        
+        if(!askLoc.equals("yes")){
+            System.out.println("Enter in your local tax rate.");
+            taxRate = input.nextDouble()/100;
+        }
+        double postTaxTotal=(preTaxTotal * taxRate)+preTaxTotal;
+        double finalTip=(preTaxTotal * tipPrecent);
+        double billTotal=(finalTip+postTaxTotal);
+        
+        System.out.println(df.format(postTaxTotal));
+        System.out.println(df.format(finalTip));
+        System.out.println(df.format(billTotal));
